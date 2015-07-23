@@ -4,7 +4,7 @@ _memento_cache = {}
 def memento_factory(name, func):
     """
     Return a memoizing metaclass with the given name and key function.
-    And yes that makes this a parametrized meta-metaclass, which is probably
+    That makes this a parametrized meta-metaclass, which is probably
     the most meta thing you've ever seen. If it isn't, both congratulations
     and sympathies are in order!
     """
