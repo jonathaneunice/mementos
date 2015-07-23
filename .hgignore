@@ -1,0 +1,11 @@
+syntax: glob
+*.swp.{py,txt,html,css,js}
+*.swp
+*.pyc
+.tox
+.DS_Store
+build/*
+dist/*
+*.egg-info
+setup.cfg
+PKG-INFO
