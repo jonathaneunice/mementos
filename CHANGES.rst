@@ -2,6 +2,11 @@
 Change Log
 ==========
 
+1.0.5 (July 22, 2005)
+'''''''''''''''''''''
+
+ * Inagurated continuous integration testing with Travis CI.
+
 1.0.4 (May 14, 2005)
 ''''''''''''''''''''
 

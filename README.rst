@@ -1,22 +1,23 @@
-| |version| |downloads| |supported-versions| |supported-implementations|
 
-.. |version| image:: http://img.shields.io/pypi/v/mementos.png?style=flat
+| |travisci| |version| |downloads| |supported-versions| |supported-implementations|
+
+.. |travisci| image:: https://travis-ci.org/jonathaneunice/mementos.svg?branch=master
+    :alt: Travis CI build status
+    :target: https://travis-ci.org/jonathaneunice/mementos
+
+.. |version| image:: http://img.shields.io/pypi/v/mementos.svg?style=flat
     :alt: PyPI Package latest release
     :target: https://pypi.python.org/pypi/mementos
 
-.. |downloads| image:: http://img.shields.io/pypi/dm/mementos.png?style=flat
+.. |downloads| image:: http://img.shields.io/pypi/dm/mementos.svg?style=flat
     :alt: PyPI Package monthly downloads
     :target: https://pypi.python.org/pypi/mementos
 
-.. |wheel| image:: https://pypip.in/wheel/mementos/badge.png?style=flat
-    :alt: PyPI Wheel
-    :target: https://pypi.python.org/pypi/mementos
-
-.. |supported-versions| image:: https://pypip.in/py_versions/mementos/badge.png?style=flat
+.. |supported-versions| image:: https://pypip.in/py_versions/mementos/badge.svg?style=flat
     :alt: Supported versions
     :target: https://pypi.python.org/pypi/mementos
 
-.. |supported-implementations| image:: https://pypip.in/implementation/mementos/badge.png?style=flat
+.. |supported-implementations| image:: https://pypip.in/implementation/mementos/badge.svg?style=flat
     :alt: Supported implementations
     :target: https://pypi.python.org/pypi/mementos
 
@@ -214,12 +215,12 @@ Notes
     lock.
 
  *  Automated multi-version testing managed with the wonderful
-    `pytest <http://pypi.python.org/pypi/pytest>`_,
-    `pytest-cov <http://pypi.python.org/pypi/pytest>`_,
+    `pytest <http://pypi.python.org/pypi/pytest>`_
     and `tox <http://pypi.python.org/pypi/tox>`_.
     Successfully packaged for, and tested against, all late-model versions of
-    Python: 2.6, 2.7, 3.2, 3.3, 3.4, 3.5a4, as well as PyPy 2.5.1 (based on 2.7.9)
-    and PyPy3 2.4.0 (based on 3.2.5).
+    Python: 2.6, 2.7, 3.3, 3.2, 3.4, as well as PyPy 2.5.1 (based on 2.7.9)
+    and PyPy3 2.4.0 (based on 3.2.5). Should run fine on Python 3.5, though
+    py.test is broken on its pre-release iterations.
 
  *  Should also work under Python 2.5, but is no longer tested there, as my
     testing tools no longer support it. It's 8 years old. If you're still using

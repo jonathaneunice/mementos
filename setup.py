@@ -15,7 +15,7 @@ def linelist(text):
 
 setup(
     name='mementos',
-    version="1.0.4",
+    version="1.0.5",
     author='Jonathan Eunice',
     author_email='jonathan.eunice@gmail.com',
     description='Memoizing metaclass. Drop-dead simple way to create cached objects',
@@ -23,8 +23,8 @@ setup(
     url='https://bitbucket.org/jeunice/mementos',
     py_modules=['mementos'],
     install_requires=[],
-    tests_require = ['tox', 'pytest'],
-    zip_safe = True,
+    tests_require=['tox', 'pytest'],
+    zip_safe=True,
     classifiers=linelist("""
         Development Status :: 5 - Production/Stable
         Operating System :: OS Independent
@@ -37,6 +37,7 @@ setup(
         Programming Language :: Python :: 3.2
         Programming Language :: Python :: 3.3
         Programming Language :: Python :: 3.4
+        Programming Language :: Python :: 3.5
         Programming Language :: Python :: Implementation :: CPython
         Programming Language :: Python :: Implementation :: PyPy
         Topic :: Software Development :: Libraries :: Python Modules
