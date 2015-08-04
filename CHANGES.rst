@@ -2,7 +2,14 @@
 Change Log
 ==========
 
-1.0.5 (July 22, 2005)
+1.0.6 (August 4, 2015)
+''''''''''''''''''''''
+
+ * Switched to Apache Software License 2.0.
+ * Updated testing configuration to add 3.5 and tox improvements.
+ * Added wheel software packaging.
+
+1.0.5 (July 22, 2015)
 '''''''''''''''''''''
 
  * Inagurated continuous integration testing with Travis CI.

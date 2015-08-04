@@ -1,5 +1,5 @@
 
-| |travisci| |version| |downloads| |supported-versions| |supported-implementations|
+| |travisci| |version| |downloads| |supported-versions| |supported-implementations| |wheel|
 
 .. |travisci| image:: https://travis-ci.org/jonathaneunice/mementos.svg?branch=master
     :alt: Travis CI build status
@@ -19,6 +19,10 @@
 
 .. |supported-implementations| image:: https://pypip.in/implementation/mementos/badge.svg?style=flat
     :alt: Supported implementations
+    :target: https://pypi.python.org/pypi/mementos
+
+.. |wheel| image:: https://img.shields.io/pypi/wheel/mementos.svg
+    :alt: Wheel packaging support
     :target: https://pypi.python.org/pypi/mementos
 
 A quick way to make Python classes automatically memoize (a.k.a. cache) their
@@ -195,6 +199,8 @@ custom basis (based on the specific args). Or in Python 2.7 and 3.x, the
 Notes
 =====
 
+ *  See ``CHANGES.rst`` for Change Log.
+
  *  ``mementos`` is not to be confused with `memento
     <http://pypi.python.org/pypi/memento>`_, which does something completely
     different.
@@ -214,16 +220,19 @@ Notes
     multi-threaded environment, consider wrapping object instantiation in a
     lock.
 
- *  Automated multi-version testing managed with the wonderful
-    `pytest <http://pypi.python.org/pypi/pytest>`_
-    and `tox <http://pypi.python.org/pypi/tox>`_.
-    Successfully packaged for, and tested against, all late-model versions of
-    Python: 2.6, 2.7, 3.3, 3.2, 3.4, as well as PyPy 2.5.1 (based on 2.7.9)
-    and PyPy3 2.4.0 (based on 3.2.5). Should run fine on Python 3.5, though
-    py.test is broken on its pre-release iterations.
+ *  Automated multi-version testing managed with `pytest
+    <http://pypi.python.org/pypi/pytest>`_ and `tox
+    <http://pypi.python.org/pypi/tox>`_. Continuous integration testing
+    with `Travis-CI <https://travis-ci.org/jonathaneunice/intspan>`_.
+    Packaging linting with `pyroma <https://pypi.python.org/pypi/pyroma>`_.
+
+    Successfully packaged for, and
+    tested against, all late-model versions of Python: 2.6, 2.7, 3.2, 3.3,
+    3.4, and 3.5 pre-release (3.5.0b3) as well as PyPy 2.6.0 (based on
+    2.7.9) and PyPy3 2.4.0 (based on 3.2.5).
 
  *  Should also work under Python 2.5, but is no longer tested there, as my
-    testing tools no longer support it. It's 8 years old. If you're still using
+    testing tools no longer support it. It's years old. If you're still using
     2.5, it's long past time to upgrade!
 
 

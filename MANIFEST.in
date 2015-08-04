@@ -6,4 +6,8 @@ include tox.ini
 include .travis.yml
 include mementos.py
 recursive-include test *.py
-
+include .gitignore
+include .hgignore
+include requirements.txt
+include setup.cfg
+include setup.py
