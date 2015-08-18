@@ -1,5 +1,5 @@
 
-| |travisci| |version| |downloads| |supported-versions| |supported-implementations| |wheel|
+| |travisci| |version| |downloads| |supported-versions| |supported-implementations| |wheel| |coverage|
 
 .. |travisci| image:: https://travis-ci.org/jonathaneunice/mementos.svg?branch=master
     :alt: Travis CI build status
@@ -23,6 +23,10 @@
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/mementos.svg
     :alt: Wheel packaging support
+    :target: https://pypi.python.org/pypi/mementos
+
+.. |coverage| image:: https://img.shields.io/badge/test_coverage-100%25-6600CC.svg
+    :alt: Test line coverage
     :target: https://pypi.python.org/pypi/mementos
 
 A quick way to make Python classes automatically memoize (a.k.a. cache) their
@@ -199,47 +203,52 @@ custom basis (based on the specific args). Or in Python 2.7 and 3.x, the
 Notes
 =====
 
- *  See ``CHANGES.rst`` for Change Log.
+* Version 1.1 initiates automatic measurement of test coverage. Line
+  coverage is 100%. *Hooah!*
 
- *  ``mementos`` is not to be confused with `memento
-    <http://pypi.python.org/pypi/memento>`_, which does something completely
-    different.
+* See ``CHANGES.rst`` for the extended Change Log.
 
- *  ``mementos`` was originally derived from `an ActiveState recipe
-    <http://code.activestate.com/recipes/286132-memento-design-pattern-in-python/>`_
-    by Valentino Volonghi. While the current implementation quite different and
-    the scope much broader, the availability of that recipe was what enabled
-    this module and the growing list of modules that depend on it. This is what
-    open source evolution is all about. Thank you, Valentino!
+* ``mementos`` is not to be confused with `memento
+  <http://pypi.python.org/pypi/memento>`_, which does something completely
+  different.
 
- *  It is safe to memoize multiple classes at the same time. They will all be
-    stored in the same cache, but their class is a part of the cache key, so the
-    values are distinct.
+* ``mementos`` was originally derived from `an ActiveState recipe
+  <http://code.activestate.com/recipes/286132-memento-design-pattern-in-python/>`_
+  by Valentino Volonghi. While the current implementation quite different and
+  the scope much broader, the availability of that recipe was what enabled
+  this module and the growing list of modules that depend on it. This is what
+  open source evolution is all about. Thank you, Valentino!
 
- *  This implementation is *not* thread-safe, in and of itself. If you're in a
-    multi-threaded environment, consider wrapping object instantiation in a
-    lock.
+* It is safe to memoize multiple classes at the same time. They will all be
+  stored in the same cache, but their class is a part of the cache key, so the
+  values are distinct.
 
- *  Automated multi-version testing managed with `pytest
-    <http://pypi.python.org/pypi/pytest>`_ and `tox
-    <http://pypi.python.org/pypi/tox>`_. Continuous integration testing
-    with `Travis-CI <https://travis-ci.org/jonathaneunice/intspan>`_.
-    Packaging linting with `pyroma <https://pypi.python.org/pypi/pyroma>`_.
+* This implementation is *not* thread-safe, in and of itself. If you're in a
+  multi-threaded environment, consider wrapping object instantiation in a
+  lock.
 
-    Successfully packaged for, and
-    tested against, all late-model versions of Python: 2.6, 2.7, 3.2, 3.3,
-    3.4, and 3.5 pre-release (3.5.0b3) as well as PyPy 2.6.0 (based on
-    2.7.9) and PyPy3 2.4.0 (based on 3.2.5).
+* Automated multi-version testing managed with `pytest
+  <http://pypi.python.org/pypi/pytest>`_, `pytest-cov
+  <http://pypi.python.org/pypi/pytest-cov>`_,
+  `coverage <https://pypi.python.org/pypi/coverage/4.0b1>`_
+  and `tox
+  <http://pypi.python.org/pypi/tox>`_. Continuous integration testing
+  with `Travis-CI <https://travis-ci.org/jonathaneunice/intspan>`_.
+  Packaging linting with `pyroma <https://pypi.python.org/pypi/pyroma>`_.
 
- *  Should also work under Python 2.5, but is no longer tested there, as my
-    testing tools no longer support it. It's years old. If you're still using
-    2.5, it's long past time to upgrade!
+  Successfully packaged for, and
+  tested against, all late-model versions of Python: 2.6, 2.7, 3.2, 3.3,
+  3.4, and 3.5 pre-release (3.5.0b3) as well as PyPy 2.6.0 (based on
+  2.7.9) and PyPy3 2.4.0 (based on 3.2.5). Test line coverage 100%.
 
+* The author, `Jonathan Eunice <mailto:jonathan.eunice@gmail.com>`_
+  or `@jeunice on Twitter <http://twitter.com/jeunice>`_ welcomes
+  your comments and suggestions.
 
 Installation
 ============
 
-::
+To install or upgrade to the latest version::
 
     pip install -U mementos
 
@@ -247,7 +256,7 @@ To ``easy_install`` under a specific Python version (3.3 in this example)::
 
     python3.3 -m easy_install --upgrade mementos
 
-(You may need to prefix these with "sudo " to authorize installation. In
-environments without super-user privileges, you may want to use ``pip``'s
-``--user`` option, to install only for a single user, rather than
-system-wide.)
+(You may need to prefix these with ``sudo`` to authorize
+installation. In environments without super-user privileges, you may want to
+use ``pip``'s ``--user`` option, to install only for a single user, rather
+than system-wide.)

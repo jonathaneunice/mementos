@@ -1,6 +1,7 @@
 syntax: glob
 *.swp.{py,txt,html,css,js}
 *.swp
+.coverage
 .git/*
 *.pyc
 .tox
