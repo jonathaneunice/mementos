@@ -233,7 +233,7 @@ Notes
   `coverage <https://pypi.python.org/pypi/coverage/4.0b1>`_
   and `tox
   <http://pypi.python.org/pypi/tox>`_. Continuous integration testing
-  with `Travis-CI <https://travis-ci.org/jonathaneunice/intspan>`_.
+  with `Travis-CI <https://travis-ci.org/jonathaneunice/mementos>`_.
   Packaging linting with `pyroma <https://pypi.python.org/pypi/pyroma>`_.
 
   Successfully packaged for, and
