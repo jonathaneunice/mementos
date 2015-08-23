@@ -1,5 +1,5 @@
 
-| |travisci| |version| |downloads| |supported-versions| |supported-implementations| |wheel| |coverage|
+| |travisci| |version| |downloads| |versions| |impls| |wheel| |coverage| |br-coverage|
 
 .. |travisci| image:: https://travis-ci.org/jonathaneunice/mementos.svg?branch=master
     :alt: Travis CI build status
@@ -13,11 +13,11 @@
     :alt: PyPI Package monthly downloads
     :target: https://pypi.python.org/pypi/mementos
 
-.. |supported-versions| image:: https://pypip.in/py_versions/mementos/badge.svg?style=flat
+.. |versions| image:: https://pypip.in/py_versions/mementos/badge.svg?style=flat
     :alt: Supported versions
     :target: https://pypi.python.org/pypi/mementos
 
-.. |supported-implementations| image:: https://pypip.in/implementation/mementos/badge.svg?style=flat
+.. |impls| image:: https://pypip.in/implementation/mementos/badge.svg?style=flat
     :alt: Supported implementations
     :target: https://pypi.python.org/pypi/mementos
 
@@ -27,6 +27,10 @@
 
 .. |coverage| image:: https://img.shields.io/badge/test_coverage-100%25-6600CC.svg
     :alt: Test line coverage
+    :target: https://pypi.python.org/pypi/mementos
+
+.. |br-coverage| image:: https://img.shields.io/badge/branch_coverage-95%25-blue.svg
+    :alt: Test branch coverage
     :target: https://pypi.python.org/pypi/mementos
 
 A quick way to make Python classes automatically memoize (a.k.a. cache) their
@@ -203,6 +207,9 @@ custom basis (based on the specific args). Or in Python 2.7 and 3.x, the
 Notes
 =====
 
+* Version 1.1.2 adds automatic measurement of test branch coverage.
+  Starts with 95% branch coverage.
+  
 * Version 1.1 initiates automatic measurement of test coverage. Line
   coverage is 100%. *Hooah!*
 
@@ -260,3 +267,12 @@ To ``easy_install`` under a specific Python version (3.3 in this example)::
 installation. In environments without super-user privileges, you may want to
 use ``pip``'s ``--user`` option, to install only for a single user, rather
 than system-wide.)
+
+Testing
+=======
+
+To run the module tests, use one of these commands::
+
+    tox                # normal run - speed optimized
+    tox -e py27        # run for a specific version only (e.g. py27, py34)
+    tox -c toxcov.ini  # run full coverage tests
