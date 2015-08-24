@@ -15,7 +15,7 @@ def lines(text):
 
 setup(
     name='mementos',
-    version='1.1.2',
+    version='1.2.0',
     author='Jonathan Eunice',
     author_email='jonathan.eunice@gmail.com',
     description='Memoizing metaclass. Drop-dead simple way to create cached objects',
