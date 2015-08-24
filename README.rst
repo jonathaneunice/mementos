@@ -50,9 +50,9 @@ Usage
 Say you have a class ``Thing`` that requires expensive computation to create, or
 that should be created only once. Easy peasy::
 
-    from mementos import MementoMetaclass, with_metaclass
+    from mementos import mementos
 
-    class Thing(with_metaclass(MementoMetaclass, object)):
+    class Thing(mementos):
 
         def __init__(self, name):
             self.name = name
@@ -64,6 +64,25 @@ Then ``Thing`` objects will be memoized::
     t1 = Thing("one")
     t2 = Thing("one")
     assert t1 is t2    # same instantiation args => same object
+
+
+Under the Hood
+==============
+
+When you define a class ``class Thing(mementos)``, it looks like you're
+subclassing the ``mementos`` class.  Not really. ``mementos`` is a metaclass,
+not a subclass.  The full expression is equivalent to
+``class Thing(with_metaclass(MementoMetaclass, object))``, where ``with_metaclass``
+and ``MementoMetaclass`` are also provided by the ``mementos`` module.
+Metaclasses are not normal superclasses; instead they define how a class is
+constructed. In effect, they define
+the mysterious ``__new__`` method that most classes don't bother definiing.
+In this case, ``mementos`` says in effect, "hey, look in the cache for this
+object before you create another one."
+
+If you like, you can use the longer invocation with the full ``with_metaclass``
+spec, but it's not necessary unless you define your own memoizing functions.
+More on that below.
 
 Python 2 vs. Python 3
 =====================
@@ -207,9 +226,11 @@ custom basis (based on the specific args). Or in Python 2.7 and 3.x, the
 Notes
 =====
 
+* Version 1.2 adds the ``mementos`` shorthand.
+
 * Version 1.1.2 adds automatic measurement of test branch coverage.
   Starts with 95% branch coverage.
-  
+
 * Version 1.1 initiates automatic measurement of test coverage. Line
   coverage is 100%. *Hooah!*
 

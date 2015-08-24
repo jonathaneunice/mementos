@@ -5,4 +5,5 @@ include tox.ini
 include .travis.yml
 include mementos.py
 recursive-include test *.py
-include setup.py
+include .coveragerc
+include toxcov.ini

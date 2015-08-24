@@ -2,6 +2,23 @@
 Change Log
 ==========
 
+1.2 (August 24, 2015)
+'''''''''''''''''''''
+
+* Adds the ``mementos`` shorthand.
+
+1.1.2
+'''''
+
+* Adds automatic measurement of test branch coverage.
+  Starts with 95% branch coverage.
+
+1.1
+'''
+
+* Initiates automatic measurement of test coverage. Line
+  coverage is 100%. *Hooah!*
+
 1.0.6 (August 4, 2015)
 ''''''''''''''''''''''
 

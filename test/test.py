@@ -37,6 +37,40 @@ def test_one():
     assert ot1.weight == ot2.weight == 'light'
 
 
+def test_simplified():
+    class Thing(mementos):
+
+        def __init__(self, name):
+            self.name = name
+
+
+    t1 = Thing("one")
+    t2 = Thing("one")
+    assert t1 is t2
+
+    o1 = Thing("lovely")
+    o2 = Thing(name="lovely")
+    assert o1 is not o2   # because the call signature is different
+
+    class OtherThing(with_metaclass(MementoMetaclass, object)):
+
+        def __init__(self, name):
+            self.name = name
+            self.color = None
+            self.weight = None
+
+        def set(self, color=None, weight=None):
+            self.color = color or self.color
+            self.weight = weight or self.weight
+            return self
+
+    ot1 = OtherThing("one").set(color='blue')
+    ot2 = OtherThing("one").set(weight='light')
+    assert ot1 is ot2
+    assert ot1.color == ot2.color == 'blue'
+    assert ot1.weight == ot2.weight == 'light'
+
+
 def test_inline_with_metaclass():
 
     # Make sure you can do the metaclass specification directly.

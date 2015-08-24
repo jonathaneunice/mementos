@@ -35,6 +35,10 @@ def with_metaclass(meta, base=object):
         basetuple = (base,)
     return meta("NewBase", basetuple, {})
 
+
+# even simpler front-end
+mementos = with_metaclass(MementoMetaclass, object)
+
 # Some reading:
 # http://bytes.com/topic/python/answers/40084-parameterized-metaclass-metametaclass
 # http://www.acooke.org/cute/PythonMeta0.html
