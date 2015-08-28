@@ -71,12 +71,12 @@ Under the Hood
 
 When you define a class ``class Thing(mementos)``, it looks like you're
 subclassing the ``mementos`` class.  Not really. ``mementos`` is a metaclass,
-not a subclass.  The full expression is equivalent to
+not a superclass.  The full expression is equivalent to
 ``class Thing(with_metaclass(MementoMetaclass, object))``, where ``with_metaclass``
 and ``MementoMetaclass`` are also provided by the ``mementos`` module.
 Metaclasses are not normal superclasses; instead they define how a class is
 constructed. In effect, they define
-the mysterious ``__new__`` method that most classes don't bother definiing.
+the mysterious ``__new__`` method that most classes don't bother defining.
 In this case, ``mementos`` says in effect, "hey, look in the cache for this
 object before you create another one."
 
