@@ -2,6 +2,13 @@
 Change Log
 ==========
 
+1.2.2 (June 22, 2016)
+'''''''''''''''''''''
+
+* Updated testing matrix. Latest versions of 2.7, 3.3, 3.4, 3.5,
+  the new 3.6 (alpha 2), and
+  PyPy are confirmed working.
+
 1.2 (August 24, 2015)
 '''''''''''''''''''''
 
