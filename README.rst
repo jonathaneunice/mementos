@@ -13,11 +13,11 @@
     :alt: PyPI Package monthly downloads
     :target: https://pypi.python.org/pypi/mementos
 
-.. |versions| image:: https://pypip.in/py_versions/mementos/badge.svg?style=flat
+.. |versions| image:: https://img.shields.io/pypi/pyversions/mementos.svg
     :alt: Supported versions
     :target: https://pypi.python.org/pypi/mementos
 
-.. |impls| image:: https://pypip.in/implementation/mementos/badge.svg?style=flat
+.. |impls| image:: https://img.shields.io/pypi/implementation/mementos.svg
     :alt: Supported implementations
     :target: https://pypi.python.org/pypi/mementos
 
@@ -267,7 +267,7 @@ Notes
   Successfully packaged for, and
   tested against, all late-model versions of Python: 2.6, 2.7, 3.3,
   3.4, 3.5, and 3.6 PyPy 5.6.0 (based on
-  2.7.12) and PyPy3 5.5.0 (based on 3.3.5). 
+  2.7.12) and PyPy3 5.5.0 (based on 3.3.5).
   Test line coverage 100%.
 
 * The author, `Jonathan Eunice <mailto:jonathan.eunice@gmail.com>`_
