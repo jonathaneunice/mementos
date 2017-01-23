@@ -226,13 +226,13 @@ custom basis (based on the specific args). Or in Python 2.7 and 3.x, the
 Notes
 =====
 
-* Version 1.2 adds the ``mementos`` shorthand.
 
-* Version 1.1.2 adds automatic measurement of test branch coverage.
-  Starts with 95% branch coverage.
-
-* Version 1.1 initiates automatic measurement of test coverage. Line
-  coverage is 100%. *Hooah!*
+* Version 2.2.6 updates testing for early 2017 Python
+  versions. Successfully packaged for, and
+  tested against, all late-model versions of Python: 2.6, 2.7, 3.3,
+  3.4, 3.5, and 3.6, as well as PyPy 5.6.0 (based on
+  2.7.12) and PyPy3 5.5.0 (based on 3.3.5). Support for
+  Python 3.2 withdrawn due to obsolescence.
 
 * See ``CHANGES.rst`` for the extended Change Log.
 
@@ -263,12 +263,6 @@ Notes
   <http://pypi.python.org/pypi/tox>`_. Continuous integration testing
   with `Travis-CI <https://travis-ci.org/jonathaneunice/mementos>`_.
   Packaging linting with `pyroma <https://pypi.python.org/pypi/pyroma>`_.
-
-  Successfully packaged for, and
-  tested against, all late-model versions of Python: 2.6, 2.7, 3.3,
-  3.4, 3.5, and 3.6 PyPy 5.6.0 (based on
-  2.7.12) and PyPy3 5.5.0 (based on 3.3.5).
-  Test line coverage 100%.
 
 * The author, `Jonathan Eunice <mailto:jonathan.eunice@gmail.com>`_
   or `@jeunice on Twitter <http://twitter.com/jeunice>`_ welcomes
