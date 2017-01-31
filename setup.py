@@ -15,14 +15,14 @@ def lines(text):
 
 setup(
     name='mementos',
-    version='1.2.5',
+    version='1.2.6',
     author='Jonathan Eunice',
     author_email='jonathan.eunice@gmail.com',
     description='Memoizing metaclass. Drop-dead simple way to create cached objects',
     long_description=open('README.rst', encoding='utf-8').read(),
     url='https://bitbucket.org/jeunice/mementos',
     license='Apache License 2.0',
-    py_modules=['mementos'],
+    packages=['mementos'],
     setup_requires=[],
     install_requires=[],
     tests_require=['tox', 'pytest', 'pytest-cov', 'coverage'],
