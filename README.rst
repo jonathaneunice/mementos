@@ -226,14 +226,6 @@ custom basis (based on the specific args). Or in Python 2.7 and 3.x, the
 Notes
 =====
 
-
-* Version 2.2.6 updates testing for early 2017 Python
-  versions. Successfully packaged for, and
-  tested against, all late-model versions of Python: 2.6, 2.7, 3.3,
-  3.4, 3.5, and 3.6, as well as PyPy 5.6.0 (based on
-  2.7.12) and PyPy3 5.5.0 (based on 3.3.5). Support for
-  Python 3.2 withdrawn due to obsolescence.
-
 * See ``CHANGES.rst`` for the extended Change Log.
 
 * ``mementos`` is not to be confused with `memento
