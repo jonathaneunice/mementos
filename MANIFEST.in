@@ -1,9 +1,9 @@
 include README.rst
-include CHANGES.rst
+include CHANGES.yml
 include pytest.ini
 include tox.ini
+include toxcov.ini
 include .travis.yml
 include mementos.py
 recursive-include test *.py
 include .coveragerc
-include toxcov.ini
