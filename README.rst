@@ -1,5 +1,5 @@
 
-| |travisci| |version| |downloads| |versions| |impls| |wheel| |coverage| |br-coverage|
+| |travisci| |version| |versions| |impls| |wheel| |coverage| |br-coverage|
 
 .. |travisci| image:: https://travis-ci.org/jonathaneunice/mementos.svg?branch=master
     :alt: Travis CI build status
@@ -7,10 +7,6 @@
 
 .. |version| image:: http://img.shields.io/pypi/v/mementos.svg?style=flat
     :alt: PyPI Package latest release
-    :target: https://pypi.python.org/pypi/mementos
-
-.. |downloads| image:: http://img.shields.io/pypi/dm/mementos.svg?style=flat
-    :alt: PyPI Package monthly downloads
     :target: https://pypi.python.org/pypi/mementos
 
 .. |versions| image:: https://img.shields.io/pypi/pyversions/mementos.svg
@@ -267,14 +263,12 @@ To install or upgrade to the latest version::
 
     pip install -U mementos
 
-To ``easy_install`` under a specific Python version (3.3 in this example)::
-
-    python3.3 -m easy_install --upgrade mementos
-
-(You may need to prefix these with ``sudo`` to authorize
+You may need to prefix these with ``sudo`` to authorize
 installation. In environments without super-user privileges, you may want to
 use ``pip``'s ``--user`` option, to install only for a single user, rather
-than system-wide.)
+than system-wide. Depending on your system configuration, you may also
+need to use separate ``pip2`` and ``pip3`` programs to install for Python 
+2 and 3 respectively.
 
 Testing
 =======
