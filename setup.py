@@ -15,7 +15,7 @@ def lines(text):
 
 setup(
     name='mementos',
-    version='1.2.8',
+    version='1.3.0',
     author='Jonathan Eunice',
     author_email='jonathan.eunice@gmail.com',
     description='Memoizing metaclass. Drop-dead simple way to create cached objects',
@@ -35,7 +35,6 @@ setup(
         Intended Audience :: Developers
         Programming Language :: Python
         Programming Language :: Python :: 2
-        Programming Language :: Python :: 2.5
         Programming Language :: Python :: 2.6
         Programming Language :: Python :: 2.7
         Programming Language :: Python :: 3
@@ -43,6 +42,7 @@ setup(
         Programming Language :: Python :: 3.4
         Programming Language :: Python :: 3.5
         Programming Language :: Python :: 3.6
+        Programming Language :: Python :: 3.7
         Programming Language :: Python :: Implementation :: CPython
         Programming Language :: Python :: Implementation :: PyPy
         Topic :: Software Development :: Libraries :: Python Modules

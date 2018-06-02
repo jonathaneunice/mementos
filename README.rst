@@ -25,20 +25,18 @@
     :alt: Test line coverage
     :target: https://pypi.python.org/pypi/mementos
 
-.. |br-coverage| image:: https://img.shields.io/badge/branch_coverage-96%25-blue.svg
+.. |br-coverage| image:: https://img.shields.io/badge/branch_coverage-100%25-6600CC.svg
     :alt: Test branch coverage
     :target: https://pypi.python.org/pypi/mementos
 
 A quick way to make Python classes automatically memoize (a.k.a. cache) their
 instances based on the arguments with which they are instantiated (i.e. args to
-their
-``__init__``).
+their ``__init__``).
 
-It's a simple way to avoid repetitively creating
-expensive-to-create objects, and to make sure objects that have a natural
-'identity' are created only once. If you want to be fancy, ``mementos``
-implements the `Multiton <https://en.wikipedia.org/wiki/Multiton_pattern>`_
-software pattern.
+It's a simple way to avoid repetitively creating expensive-to-create objects,
+and to make sure objects that have a natural 'identity' are created only once.
+If you want to be fancy, ``mementos`` implements the `Multiton
+<https://en.wikipedia.org/wiki/Multiton_pattern>`_ software pattern.
 
 Usage
 =====
@@ -66,15 +64,15 @@ Under the Hood
 ==============
 
 When you define a class ``class Thing(mementos)``, it looks like you're
-subclassing the ``mementos`` class.  Not really. ``mementos`` is a metaclass,
-not a superclass.  The full expression is equivalent to
-``class Thing(with_metaclass(MementoMetaclass, object))``, where ``with_metaclass``
-and ``MementoMetaclass`` are also provided by the ``mementos`` module.
+subclassing the ``mementos`` class. Not really. ``mementos`` is a metaclass,
+not a superclass. The full expression is equivalent to ``class
+Thing(with_metaclass(MementoMetaclass, object))``, where ``with_metaclass`` and
+``MementoMetaclass`` are also provided by the ``mementos`` module. 
+
 Metaclasses are not normal superclasses; instead they define how a class is
-constructed. In effect, they define
-the mysterious ``__new__`` method that most classes don't bother defining.
-In this case, ``mementos`` says in effect, "hey, look in the cache for this
-object before you create another one."
+constructed. In effect, they define the mysterious ``__new__`` method that most
+classes don't bother defining. In this case, ``mementos`` says in effect, "hey,
+look in the cache for this object before you create another one."
 
 If you like, you can use the longer invocation with the full ``with_metaclass``
 spec, but it's not necessary unless you define your own memoizing functions.
@@ -101,12 +99,10 @@ Whereas Python 3 uses::
         ...
 
 ``mementos`` supports either of these. But Python 2 and Python 3 don't
-recognize each other's syntax for
-metaclass specification, so straightforward code for one won't even compile for
-the other. The ``with_metaclass()`` function shown above is the way to go
-for cross-version compatibility. It's very similar to that found in the
-``six`` cross-version compatibility
-module.
+recognize each other's syntax for metaclass specification, so straightforward
+code for one won't even compile for the other. The ``with_metaclass()``
+function shown above is the way to go for cross-version compatibility. It's
+very similar to that found in the ``six`` cross-version compatibility module.
 
 Careful with Call Signatures
 ============================
@@ -268,7 +264,12 @@ installation. In environments without super-user privileges, you may want to
 use ``pip``'s ``--user`` option, to install only for a single user, rather
 than system-wide. Depending on your system configuration, you may also
 need to use separate ``pip2`` and ``pip3`` programs to install for Python 
-2 and 3 respectively.
+2 and 3 respectively. As a fall-back for cases where the releationship between
+``pip`` and the Python interpreter you want to run is unclear, you can
+invoke ``pip`` as a module under a specific Python executable::
+
+
+    python3.6 -m pip install -U mementos
 
 Testing
 =======

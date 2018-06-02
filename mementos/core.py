@@ -31,8 +31,8 @@ def with_metaclass(meta, base=object):
     Create a base class with a metaclass. Compatible across Python 2 and Python
     3. Extension of the with_metaclass() found in the six module.
     """
-    if not isinstance(base, tuple):
-        basetuple = (base,)
+
+    basetuple = base if isinstance(base, tuple) else (base,)
     return meta("NewBase", basetuple, {})
 
 

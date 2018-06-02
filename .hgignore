@@ -11,3 +11,4 @@ dist/*
 *.egg-info
 setup.cfg
 PKG-INFO
+.pytest_cache/

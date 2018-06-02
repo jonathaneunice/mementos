@@ -71,6 +71,30 @@ def test_simplified():
     assert ot1.weight == ot2.weight == 'light'
 
 
+def test_tuple_subclass():
+
+    class Fribble(object):
+        def fribble(self):
+            return 100
+
+    class Frabble(object):
+        def frabble(self):
+            return 333
+
+    class Complex(with_metaclass(MementoMetaclass, (Fribble, Frabble))):
+
+        def __init__(self, name):
+            self.name = name
+
+    c = Complex('Joe')
+    assert c.name == 'Joe'
+    assert c.fribble() == 100
+    assert c.frabble() -- 333
+
+    c2 = Complex('Joe')
+    assert c2 is c
+
+
 def test_inline_with_metaclass():
 
     # Make sure you can do the metaclass specification directly.
