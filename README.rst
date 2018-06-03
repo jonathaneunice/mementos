@@ -7,27 +7,27 @@
 
 .. |version| image:: http://img.shields.io/pypi/v/mementos.svg?style=flat
     :alt: PyPI Package latest release
-    :target: https://pypi.python.org/pypi/mementos
+    :target: https://pypi.org/project/mementos
 
 .. |versions| image:: https://img.shields.io/pypi/pyversions/mementos.svg
     :alt: Supported versions
-    :target: https://pypi.python.org/pypi/mementos
+    :target: https://pypi.org/project/mementos
 
 .. |impls| image:: https://img.shields.io/pypi/implementation/mementos.svg
     :alt: Supported implementations
-    :target: https://pypi.python.org/pypi/mementos
+    :target: https://pypi.org/project/mementos
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/mementos.svg
     :alt: Wheel packaging support
-    :target: https://pypi.python.org/pypi/mementos
+    :target: https://pypi.org/project/mementos
 
 .. |coverage| image:: https://img.shields.io/badge/test_coverage-100%25-6600CC.svg
     :alt: Test line coverage
-    :target: https://pypi.python.org/pypi/mementos
+    :target: https://pypi.org/project/mementos
 
 .. |br-coverage| image:: https://img.shields.io/badge/branch_coverage-100%25-6600CC.svg
     :alt: Test branch coverage
-    :target: https://pypi.python.org/pypi/mementos
+    :target: https://pypi.org/project/mementos
 
 A quick way to make Python classes automatically memoize (a.k.a. cache) their
 instances based on the arguments with which they are instantiated (i.e. args to
@@ -267,7 +267,6 @@ need to use separate ``pip2`` and ``pip3`` programs to install for Python
 2 and 3 respectively. As a fall-back for cases where the releationship between
 ``pip`` and the Python interpreter you want to run is unclear, you can
 invoke ``pip`` as a module under a specific Python executable::
-
 
     python3.6 -m pip install -U mementos
 
